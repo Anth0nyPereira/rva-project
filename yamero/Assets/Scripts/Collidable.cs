@@ -12,7 +12,7 @@ public class Collidable : MonoBehaviour
     private bool isVisible;
 
 
-    public void Awake()
+    public virtual void Awake()
     {
         isVisible = collidableData.IsVisible;
         this.gameObject.SetActive(isVisible);
