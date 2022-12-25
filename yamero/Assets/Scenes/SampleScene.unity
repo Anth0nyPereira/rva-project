@@ -355,7 +355,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149551415701}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6657422945ed9244fbca257aff897a72, type: 3}
   m_Name: 
@@ -370,7 +370,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149551415701}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 032417e9838048f49b19ec7b2040377b, type: 2}
   m_CullingMode: 0
@@ -2332,6 +2332,7 @@ GameObject:
   - component: {fileID: 531266758}
   - component: {fileID: 531266760}
   - component: {fileID: 531266759}
+  - component: {fileID: 919132149551415702}
   m_Layer: 0
   m_Name: vagoneta
   m_TagString: Untagged
@@ -2339,6 +2340,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &919132149551415702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149551415701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9a7b445ed38ce4287506d38bd381c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &955133547324523112
 Transform:
   m_ObjectHideFlags: 0
