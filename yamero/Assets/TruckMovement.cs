@@ -44,6 +44,7 @@ public class TruckMovement : MonoBehaviour
     public void letTruckRotate(Transform transform)
     {
         mustRotate = true;
+        coroutineFinished = false;
         targetTransform = transform;
     }
 
