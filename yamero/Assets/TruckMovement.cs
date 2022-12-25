@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class TruckMovement : MonoBehaviour
 {
+    [SerializeField]
+    private VoidEvent enableTriggerEvent;
+
     private Vector3 direction;
     private Collider col;
     private Vector3 actualRotation;
@@ -22,14 +25,14 @@ public class TruckMovement : MonoBehaviour
         rotationY = actualRotation.y;
         // Debug.Log(rotationY);
         mustRotate = false;
-        coroutineFinished = false;
+        coroutineFinished = true;
 
     }
 
     
     private void FixedUpdate()
     {
-        col.transform.Translate(direction * Time.fixedDeltaTime, Space.Self);
+        
         if (mustRotate)
         {
             doRotation();
@@ -38,6 +41,7 @@ public class TruckMovement : MonoBehaviour
         if (coroutineFinished)
         {
             mustRotate = false;
+            col.transform.Translate(5 * direction * Time.fixedDeltaTime, Space.Self);
         }
     }
 
@@ -75,5 +79,6 @@ public class TruckMovement : MonoBehaviour
     {
         Debug.Log("finished coroutine");
         coroutineFinished = true;
+        enableTriggerEvent.Raise();
     }
 }

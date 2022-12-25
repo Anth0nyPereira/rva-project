@@ -26,4 +26,9 @@ public class Trigger : Collidable
             this.col.enabled = false;
         }
     }
+
+    public void reEnableCollider()
+    {
+        this.col.enabled = true;
+    }
 }
