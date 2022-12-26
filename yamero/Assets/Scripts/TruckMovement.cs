@@ -64,7 +64,7 @@ public class TruckMovement : MonoBehaviour
     {
         Vector3 oldR = TransformUtils.GetInspectorRotation(this.transform);
         Debug.Log("do coroutine now");
-        Debug.Log(Mathf.Abs(oldR.y - TransformUtils.GetInspectorRotation(this.transform).y));
+        // Debug.Log(Mathf.Abs(oldR.y - TransformUtils.GetInspectorRotation(this.transform).y));
         while (Mathf.Abs(oldR.y - TransformUtils.GetInspectorRotation(this.transform).y) <= 45)
         {
             transform.RotateAround(transform.position, transform.up, -Time.fixedDeltaTime);
