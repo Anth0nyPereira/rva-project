@@ -27,5 +27,7 @@ public class AnimateHandOnInput : MonoBehaviour
 
         float gripVal = gripAnimationAction.action.ReadValue<float>();
         handAnimator.SetFloat("Grip", gripVal);
+
+        Debug.Log("Pedoro migeru san teve negativa no teste, ESTUDASSES");
     }
 }
