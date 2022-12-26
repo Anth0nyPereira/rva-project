@@ -1073,6 +1073,17 @@
                 },
                 {
                     "name": "",
+                    "id": "09ca1645-8325-4fc6-b7d2-74fcb79703d6",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "022046aa-be71-4288-859d-6dd42844f6e6",
                     "path": "<XRController>{RightHand}/Primary2DAxis",
                     "interactions": "",
