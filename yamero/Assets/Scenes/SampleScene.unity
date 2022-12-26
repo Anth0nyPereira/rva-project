@@ -13911,9 +13911,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d79a96087276c449131af108f652ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 0}
-  collidableData: {fileID: 0}
-  maxHealth: {fileID: 0}
+  col: {fileID: 4931218027637830826}
+  collidableData: {fileID: 11400000, guid: 53abb3ec3f0940c4e8d8c03547fe8b46, type: 2}
+  maxHealth: {fileID: 11400000, guid: 26b8cc7d19509774089adf2591d50438, type: 2}
 --- !u!33 &4955514739784740480
 MeshFilter:
   m_ObjectHideFlags: 0
