@@ -3775,6 +3775,7 @@ GameObject:
   - component: {fileID: 4876933052589035178}
   - component: {fileID: 1305037034635129415}
   - component: {fileID: 4931218027637830826}
+  - component: {fileID: 4931218027637830827}
   m_Layer: 0
   m_Name: bathub
   m_TagString: Untagged
@@ -13895,9 +13896,23 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -462981019419857548, guid: b8410582c465ae74fa5194df6cc38c90, type: 3}
+--- !u!114 &4931218027637830827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2193423312015543783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b73c5c47488f8b4482d641cf806127f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 4931218027637830826}
+  collidableData: {fileID: 11400000, guid: 53abb3ec3f0940c4e8d8c03547fe8b46, type: 2}
 --- !u!33 &4955514739784740480
 MeshFilter:
   m_ObjectHideFlags: 0
