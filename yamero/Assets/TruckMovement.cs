@@ -41,7 +41,7 @@ public class TruckMovement : MonoBehaviour
         if (coroutineFinished)
         {
             mustRotate = false;
-            col.transform.Translate(5 * direction * Time.fixedDeltaTime, Space.Self);
+            col.transform.Translate(2 * direction * Time.fixedDeltaTime, Space.Self);
         }
     }
 
