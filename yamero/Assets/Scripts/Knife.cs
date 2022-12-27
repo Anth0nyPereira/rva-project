@@ -7,7 +7,7 @@ public class Knife : Interactable
     [SerializeField]
     private FloatSO knifeDamage;
 
-    private float damage;
+    public float damage;
    
     public override void Awake()
     {

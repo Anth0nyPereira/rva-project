@@ -8,6 +8,7 @@ public class Bathub : Collidable
     [SerializeField]
     private FloatSO maxHealth;
     private float health;
+    private float knifeDamage;
 
     public override void Awake()
     {
@@ -22,6 +23,8 @@ public class Bathub : Collidable
         if (other.gameObject.tag == "Knife")
         {
             Debug.Log("Take Damage");
+            knifeDamage = other.gameObject.GetComponent<Knife>().damage;
+            TakeDamage();
             Debug.Log("Update Bathub Surface  Cracks");
         }
     }   
@@ -33,5 +36,10 @@ public class Bathub : Collidable
             Debug.Log("Water level should decrease");
             Debug.Log("Puzzle completed. Bathub should later disappear");
         }
+    }
+
+    private void TakeDamage()
+    {
+        health -= knifeDamage;
     }
 }
