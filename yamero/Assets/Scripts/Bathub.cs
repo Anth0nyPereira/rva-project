@@ -17,6 +17,7 @@ public class Bathub : Collidable
 
     public override void OnCollisionEnter(Collision other)
     {
+
         base.OnCollisionEnter(other);
         if (other.gameObject.tag == "Knife")
         {
