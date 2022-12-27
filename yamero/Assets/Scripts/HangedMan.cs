@@ -70,8 +70,7 @@ public class HangedMan : Collidable
 
     public void makeFallDown()
     {
-        fallingDown = true;
-        doFallingDownBehaviour();
+        knot1.GetComponent<Rigidbody>().useGravity = true;
     }
 
     public void doFallingDownBehaviour()
