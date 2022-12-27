@@ -15032,6 +15032,7 @@ GameObject:
   - component: {fileID: 7218849494163611156}
   - component: {fileID: 7218849494163611158}
   - component: {fileID: 7218849494163611159}
+  - component: {fileID: 7218849494163611160}
   m_Layer: 0
   m_Name: gun
   m_TagString: Untagged
@@ -15084,7 +15085,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7218849494163611160}
+        m_TargetAssemblyTypeName: Gun, Assembly-CSharp
+        m_MethodName: disableCollider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -15208,6 +15221,20 @@ MonoBehaviour:
   bullet: {fileID: 3198131279713131683, guid: fb0af702d62a6e8468dc6f6d6ac98c07, type: 3}
   spawningPoint: {fileID: 704767992}
   speed: 20
+--- !u!114 &7218849494163611160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7218849494163611155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d13df87b1dfc59f4c9385da70f2770e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 7218849494163611158}
+  collidableData: {fileID: 11400000, guid: 5142743f2b35c6f468d69937375495cd, type: 2}
 --- !u!1 &7316625652497072792
 GameObject:
   m_ObjectHideFlags: 0
