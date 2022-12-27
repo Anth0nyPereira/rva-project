@@ -17411,7 +17411,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7218849494163611160}
-        m_TargetAssemblyTypeName: Gun, Assembly-CSharp
+        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
         m_MethodName: disableCollider
         m_Mode: 1
         m_Arguments:
@@ -17554,7 +17554,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7218849494163611155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d13df87b1dfc59f4c9385da70f2770e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d4835228fa237e4abe1bd429f44f13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 7218849494163611158}
@@ -17916,6 +17916,7 @@ GameObject:
   - component: {fileID: 8505196005697836978}
   - component: {fileID: 8505196005697836977}
   - component: {fileID: 8505196005697836976}
+  - component: {fileID: 8505196005697836979}
   m_Layer: 0
   m_Name: knife
   m_TagString: Untagged
@@ -17968,7 +17969,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8505196005697836979}
+        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+        m_MethodName: disableCollider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -18077,6 +18090,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.24113482, y: 0.049230535, z: 0.03980863}
   m_Center: {x: 0.0040703304, y: 0.012800237, z: 0.000012067147}
+--- !u!114 &8505196005697836979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8505196005697836975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ccf821fcf9e2de4f8d087693079fe6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 8505196005697836978}
+  collidableData: {fileID: 11400000, guid: a2a3b1248391e9744b6c92e353e22130, type: 2}
+  knifeDamage: {fileID: 11400000, guid: ee7388f4e4db3af478ceb0f1feba8900, type: 2}
 --- !u!1 &8553611248596356106
 GameObject:
   m_ObjectHideFlags: 0
