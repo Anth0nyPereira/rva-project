@@ -72,6 +72,7 @@ public class HangedMan : Collidable
     {
         knot1.GetComponent<Rigidbody>().useGravity = true;
     }
+    /*
 
     public void doFallingDownBehaviour()
     {
@@ -109,5 +110,6 @@ public class HangedMan : Collidable
     {
         fallingDown = false;
     }
+    */
 
 }
