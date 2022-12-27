@@ -6,10 +6,13 @@ public class Gun : Collidable
 {
     private Vector3 initPos;
 
+    private Rigidbody rb;
+
     public override void Awake()
     {
         base.Awake();
         initPos = transform.position;
+        rb = GetComponent<Rigidbody>(); 
     }
 
     public void Update()
@@ -39,6 +42,7 @@ public class Gun : Collidable
     {
         this.enableCollider();
         this.resetDefaultPosition();
+        rb.velocity = new Vector3(0, 0, 0);
     }
 
 
