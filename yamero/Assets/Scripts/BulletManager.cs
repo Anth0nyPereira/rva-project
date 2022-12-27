@@ -23,8 +23,9 @@ public class BulletManager : MonoBehaviour
 
     private void FireBullet(ActivateEventArgs args)
     {
+        Debug.Log("fire bullet!!");
         GameObject spawned = Instantiate(bullet);
         spawned.transform.position = spawningPoint.transform.position;
-        spawned.GetComponent<Rigidbody>().velocity = spawningPoint.forward * speed;
+        spawned.GetComponent<Rigidbody>().velocity = spawningPoint.right * speed;
     }
 }

@@ -897,6 +897,37 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -462981019419857548, guid: 9540709aae6fa6845936fc73d6ca2913, type: 3}
+--- !u!1 &704767991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 704767992}
+  m_Layer: 0
+  m_Name: spawningPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &704767992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704767991}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.12219998, y: 0.04979995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6654628364435001593}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -14780,6 +14811,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1798144020}
+  - {fileID: 704767992}
   m_Father: {fileID: 543450652884471987}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14999,6 +15031,7 @@ GameObject:
   - component: {fileID: 7218849494163611157}
   - component: {fileID: 7218849494163611156}
   - component: {fileID: 7218849494163611158}
+  - component: {fileID: 7218849494163611159}
   m_Layer: 0
   m_Name: gun
   m_TagString: Untagged
@@ -15160,6 +15193,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.20993389, y: 0.14557317, z: 0.03163138}
   m_Center: {x: 0.0055800825, y: -0.0038336404, z: 0.00007060263}
+--- !u!114 &7218849494163611159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7218849494163611155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ec9b3a7a44a7f42867a72a969ab709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 3198131279713131683, guid: fb0af702d62a6e8468dc6f6d6ac98c07, type: 3}
+  spawningPoint: {fileID: 704767992}
+  speed: 20
 --- !u!1 &7316625652497072792
 GameObject:
   m_ObjectHideFlags: 0
