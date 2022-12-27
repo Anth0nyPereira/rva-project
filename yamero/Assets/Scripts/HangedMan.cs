@@ -34,6 +34,7 @@ public class HangedMan : Collidable
         if (health == 0)
         {
             Debug.Log("Rope must break");
+            breakHangedManRope();
             Debug.Log("Puzzle completed. HangedMan should later disappear");
             health = maxHealth.Value;
         }
@@ -44,5 +45,19 @@ public class HangedMan : Collidable
         health-= bulletDamage;
     }
 
+    private void disableCollider()
+    {
+        this.col.enabled = false;
+    }
 
+    private GameObject getKnot()
+    {
+        return this.transform.GetChild(0).GetChild(0).gameObject;
+    }
+    private void breakHangedManRope()
+    {
+        disableCollider();
+        GameObject knot1 = this.getKnot();
+        Debug.Log("Make hanged man fall down");
+    }
 }
