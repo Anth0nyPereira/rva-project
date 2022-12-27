@@ -17,7 +17,7 @@ public class HangedMan : Collidable
 
     public override void OnCollisionEnter(Collision other)
     {
-        base.OnCollisionEnter(other);
+        Debug.Log("hanged man is colliding");
         if (other.gameObject.tag == "Bullet")
         {
             Debug.Log("Take Damage");
