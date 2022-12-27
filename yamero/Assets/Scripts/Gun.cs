@@ -14,7 +14,7 @@ public class Gun : Collidable
 
     public void Update()
     {
-        if (this.transform.position.y <= 10)
+        if (this.transform.position.y <= -10)
         {
             restartGunPosition();
         }
