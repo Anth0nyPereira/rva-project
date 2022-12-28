@@ -27,7 +27,12 @@ public class Bathub : Collidable
             TakeDamage();
             Debug.Log("Update Bathub Surface  Cracks");
         }
-    }   
+    }
+
+    public void OnCollisionStay(Collision collision)
+    {
+        Debug.Log("collision stay bath");
+    }
 
     private void Update()
     {

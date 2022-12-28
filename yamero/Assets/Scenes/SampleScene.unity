@@ -1728,7 +1728,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309102727}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 1.78, z: -22.156}
+  m_LocalPosition: {x: 0.01, y: 1.78, z: -19.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4021,7 +4021,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148895730185}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.417, y: 1.78, z: -22.156}
+  m_LocalPosition: {x: 0.417, y: 1.78, z: -19.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18153,6 +18153,7 @@ MonoBehaviour:
   col: {fileID: 8505196005697836978}
   collidableData: {fileID: 11400000, guid: a2a3b1248391e9744b6c92e353e22130, type: 2}
   knifeDamage: {fileID: 11400000, guid: ee7388f4e4db3af478ceb0f1feba8900, type: 2}
+  damage: 0
 --- !u!1 &8553611248596356106
 GameObject:
   m_ObjectHideFlags: 0
