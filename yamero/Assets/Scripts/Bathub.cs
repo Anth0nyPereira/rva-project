@@ -10,10 +10,17 @@ public class Bathub : Collidable
     private float health;
     private float knifeDamage;
 
+    private GameObject waterfall;
+    private Material bathLiquid;
+
     public override void Awake()
     {
         base.Awake();
         health = maxHealth.Value;
+        waterfall = this.transform.GetChild(0).gameObject;
+        waterfall.SetActive(false);
+
+        bathLiquid = this.transform.GetChild(1).GetChild(0).gameObject.GetComponent<Renderer>().material;
     }
 
     public override void OnCollisionEnter(Collision other)
@@ -40,11 +47,37 @@ public class Bathub : Collidable
             Debug.Log("Waterfall should appear");
             Debug.Log("Water level should decrease");
             Debug.Log("Puzzle completed. Bathub should later disappear");
+            handlePuzzle();
+            health = maxHealth.Value;
         }
     }
 
     private void TakeDamage()
     {
         health -= knifeDamage;
+    }
+
+    private void turnOnWaterfall()
+    {
+        waterfall.SetActive(true);
+    }
+
+    private void reduceLevelOfWater()
+    {
+        float fill = bathLiquid.GetFloat("_Fill");
+        float incr = 0.1f;
+        while (fill >= -5.0f)
+        {
+            fill -= incr;
+            bathLiquid.SetFloat("_Fill", fill);
+
+        }
+    }
+
+    private void handlePuzzle()
+    {
+        this.turnOnWaterfall();
+        this.reduceLevelOfWater();
+
     }
 }

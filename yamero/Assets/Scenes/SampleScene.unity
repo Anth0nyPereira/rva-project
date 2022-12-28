@@ -4007,8 +4007,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4931218027637830825}
   - {fileID: 3263649933194018678}
+  - {fileID: 4931218027637830825}
   - {fileID: 935199057}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -5666,7 +5666,7 @@ GameObject:
   - component: {fileID: 3457509256431150084}
   - component: {fileID: 3424451894712064294}
   m_Layer: 0
-  m_Name: WaterfallSmall
+  m_Name: waterfall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5719,7 +5719,7 @@ Transform:
   m_Children:
   - {fileID: 3263649932425916400}
   m_Father: {fileID: 543450652325148534}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!137 &3414802509911830337
 SkinnedMeshRenderer:
@@ -16030,7 +16030,7 @@ Transform:
   - {fileID: 8316562963475194149}
   - {fileID: 1729776006724140483}
   m_Father: {fileID: 543450652325148534}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &4955514739784740480
 MeshFilter:
