@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -43,12 +45,11 @@ public class Bathub : Collidable
 
     private void Update()
     {
-        if (health <= 0) {
+        if (health == 0) {
             Debug.Log("Waterfall should appear");
             Debug.Log("Water level should decrease");
             Debug.Log("Puzzle completed. Bathub should later disappear");
             handlePuzzle();
-            health = maxHealth.Value;
         }
     }
 
@@ -57,27 +58,45 @@ public class Bathub : Collidable
         health -= knifeDamage;
     }
 
+    private void handlePuzzle()
+    {
+        this.turnOnWaterfall();
+        this.doReduceLevelOfWater();
+
+    }
+
     private void turnOnWaterfall()
     {
         waterfall.SetActive(true);
     }
 
-    private void reduceLevelOfWater()
+    private void turnOffWaterfall()
+    {
+        waterfall.SetActive(false);
+    }
+
+    private void doReduceLevelOfWater()
+    {
+        StartCoroutine(reduceLevelOfWater(whenCoroutineEnds));
+    }
+
+    private IEnumerator reduceLevelOfWater(Action whenCoroutineWillEnd)
     {
         float fill = bathLiquid.GetFloat("_Fill");
-        float incr = 0.1f;
-        while (fill >= -5.0f)
+        float incr = 0.001f;
+        while (fill >= -0.8f)
         {
             fill -= incr;
             bathLiquid.SetFloat("_Fill", fill);
-
+            yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
+        whenCoroutineWillEnd();
     }
 
-    private void handlePuzzle()
+    public void whenCoroutineEnds()
     {
-        this.turnOnWaterfall();
-        this.reduceLevelOfWater();
-
+        this.turnOffWaterfall();
+        health = maxHealth.Value;
     }
+
 }
