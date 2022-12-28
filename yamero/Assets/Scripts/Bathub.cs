@@ -83,7 +83,7 @@ public class Bathub : Collidable
     private IEnumerator reduceLevelOfWater(Action whenCoroutineWillEnd)
     {
         float fill = bathLiquid.GetFloat("_Fill");
-        float incr = 0.001f;
+        float incr = 0.01f;
         while (fill >= -0.8f)
         {
             fill -= incr;
