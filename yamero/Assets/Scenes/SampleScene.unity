@@ -511,7 +511,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242919748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.25, z: 0}
+  m_LocalPosition: {x: 0, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5076,6 +5076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450652755668723}
   - component: {fileID: 919132149033268298}
+  - component: {fileID: 919132149033268299}
   m_Layer: 0
   m_Name: man_with_knife
   m_TagString: Untagged
@@ -5096,6 +5097,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.69, y: 0.91, z: 1}
   m_Center: {x: 0, y: 10.02, z: 1.51}
+--- !u!114 &919132149033268299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149033268297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4dd1eab470b6da4ea4386ef36f791ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 919132149033268298}
+  collidableData: {fileID: 11400000, guid: 8535c4ef030906e4c80cd3e80d0bf9d5, type: 2}
+  maxHealth: {fileID: 11400000, guid: 2ca5d198e8f2f6c48b2704a2da619b15, type: 2}
 --- !u!1 &919132149356576802
 GameObject:
   m_ObjectHideFlags: 0
@@ -22913,7 +22929,6 @@ GameObject:
   - component: {fileID: 5413158694558091208}
   - component: {fileID: 5319453611718232432}
   - component: {fileID: 5320400333942701616}
-  - component: {fileID: 5413158694558091209}
   m_Layer: 0
   m_Name: fire
   m_TagString: Untagged
@@ -22936,19 +22951,6 @@ Transform:
   m_Father: {fileID: 5215007944515068426}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5413158694558091209
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5410624181297385760}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.74587286, y: 1.2450086, z: 1.1547661}
-  m_Center: {x: -0.026876032, y: 0.5769544, z: 0.14918327}
 --- !u!1 &5565481657296444304
 GameObject:
   m_ObjectHideFlags: 0
@@ -25356,9 +25358,10 @@ GameObject:
   - component: {fileID: 8081729851165994209}
   - component: {fileID: 8081729851165994211}
   - component: {fileID: 8081729851165994210}
+  - component: {fileID: 8081729851165994212}
   m_Layer: 0
   m_Name: ligther
-  m_TagString: Untagged
+  m_TagString: Lighter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25374,8 +25377,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1635231, y: 1.0754794, z: 0.07957974}
-  m_Center: {x: 0.05872297, y: 0.0066191554, z: 0}
+  m_Size: {x: 0.1635231, y: 1.8555789, z: 0.07957974}
+  m_Center: {x: 0.058722965, y: 0.3966689, z: 0}
 --- !u!114 &8081729851165994210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25421,7 +25424,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8081729851165994212}
+        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+        m_MethodName: disableCollider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -25517,6 +25532,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &8081729851165994212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8081729851165994208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31591eed3037d074e92e1d3f29120a59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 8081729851165994209}
+  collidableData: {fileID: 11400000, guid: ea4596f0974367241ac06a8333b72a27, type: 2}
+  lighterDamage: {fileID: 11400000, guid: d2135dad64aa6464894830849e4876bc, type: 2}
+  damage: 0
 --- !u!4 &8206662096172268110
 Transform:
   m_ObjectHideFlags: 0

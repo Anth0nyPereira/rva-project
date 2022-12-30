@@ -7,6 +7,9 @@ TagManager:
   - Truck
   - Bullet
   - Knife
+  - RoomLight
+  - SamplesInfoPanel
+  - Lighter
   layers:
   - Default
   - TransparentFX
