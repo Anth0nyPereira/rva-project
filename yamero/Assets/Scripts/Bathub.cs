@@ -38,11 +38,6 @@ public class Bathub : Collidable
         }
     }
 
-    public void OnCollisionStay(Collision collision)
-    {
-        Debug.Log("collision stay bath");
-    }
-
     private void Update()
     {
         if (health == 0) {
