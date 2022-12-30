@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class HangedMan : Collidable
+public class Guillotine : Collidable
 {
     [SerializeField]
     private FloatSO maxHealth;
@@ -12,7 +12,7 @@ public class HangedMan : Collidable
 
     private float bulletDamage;
 
-    private GameObject knot1;
+    private GameObject blade;
 
     public override void Awake()
     {
@@ -36,15 +36,14 @@ public class HangedMan : Collidable
         if (health == 0)
         {
             Debug.Log("Rope must break");
-            breakHangedManRope();
-            Debug.Log("Puzzle completed. HangedMan should later disappear");
+            breakRope();
             health = maxHealth.Value;
         }
     }
 
     private void TakeDamage()
     {
-        health-= bulletDamage;
+        health -= bulletDamage;
     }
 
     private void disableCollider()
@@ -52,20 +51,19 @@ public class HangedMan : Collidable
         this.col.enabled = false;
     }
 
-    private GameObject getKnot()
+    private GameObject getBlade()
     {
-        return this.transform.GetChild(0).GetChild(0).gameObject;
+        return this.transform.GetChild(0).gameObject;
     }
-    private void breakHangedManRope()
+    private void breakRope()
     {
         disableCollider();
-        knot1 = this.getKnot();
-        Debug.Log("Make hanged man fall down");
+        blade = this.getBlade();
         makeFallDown();
     }
 
     public void makeFallDown()
     {
-        knot1.GetComponent<Rigidbody>().useGravity = true;
+        blade.GetComponent<Rigidbody>().useGravity = true;
     }
 }
