@@ -72,44 +72,4 @@ public class HangedMan : Collidable
     {
         knot1.GetComponent<Rigidbody>().useGravity = true;
     }
-    /*
-
-    public void doFallingDownBehaviour()
-    {
-        StartCoroutine(makeFallingAnimation(whenCoroutineEnds));
-
-        Debug.Log("Have a break, have a kit kat");
-    }
-
-    public float getDistanceBetweenPositions(Vector3 pos1, Vector3 pos2)
-    {
-        Vector3 directionVector = pos2 - pos1;
-        float distance = Mathf.Sqrt(Mathf.Pow(directionVector.x, 2) + Mathf.Pow(directionVector.y, 2) + Mathf.Pow(directionVector.z, 2));
-        return distance;
-    }
-
-    public IEnumerator makeFallingAnimation(Action whenCEnds)
-    {
-        Vector3 initialPosition = knot1.transform.position;
-        Debug.Log(getDistanceBetweenPositions(initialPosition, knot1.transform.position));
-        while (getDistanceBetweenPositions(initialPosition, knot1.transform.position) <= 10)
-        {
-            knot1.transform.position -= new Vector3(0, 1, 0);
-            yield return new WaitForSeconds(Time.fixedDeltaTime);
-        }
-        whenCEnds();
-    }
-
-    public void whenCoroutineEnds()
-    {
-        Debug.Log("finished coroutine");
-        stopFallingDown();
-    }
-
-    public void stopFallingDown()
-    {
-        fallingDown = false;
-    }
-    */
-
 }
