@@ -20,6 +20,7 @@ public class ManWithKnife : Collidable
     {
         if (other.gameObject.tag == "Lighter")
         {
+            Debug.Log("man with a knife");
             lighterDamage = other.gameObject.GetComponent<Lighter>().damage;
             Debug.Log("Take Damage");
             TakeDamage();
