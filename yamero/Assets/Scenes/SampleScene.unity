@@ -4557,9 +4557,9 @@ Transform:
   m_LocalScale: {x: 0.39, y: 0.39, z: 0.39}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 3745622627680105878}
   - {fileID: 1290421828794045494}
   - {fileID: 8419601292575662570}
-  - {fileID: 3745622627680105878}
   - {fileID: 78706127277777881}
   - {fileID: 2155686747473735778}
   - {fileID: 6864133456730595571}
@@ -4872,8 +4872,10 @@ GameObject:
   - component: {fileID: 3745622627680105878}
   - component: {fileID: 5334037120276546312}
   - component: {fileID: 4539702727450075095}
+  - component: {fileID: 5334037120276546314}
+  - component: {fileID: 5334037120276546313}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: knife_child
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5078,6 +5080,7 @@ GameObject:
   - component: {fileID: 919132149033268298}
   - component: {fileID: 919132149033268299}
   - component: {fileID: 919132149033268300}
+  - component: {fileID: 919132149033268301}
   m_Layer: 0
   m_Name: man_with_knife
   m_TagString: Untagged
@@ -5129,6 +5132,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!95 &919132149033268301
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149033268297}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0cadf391cf105a4b9239b1afcef2acd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &919132149356576802
 GameObject:
   m_ObjectHideFlags: 0
@@ -5413,7 +5436,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652755668723}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1305037033659145758
 MeshRenderer:
@@ -17232,7 +17255,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652755668723}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &3745622628145496573
 Transform:
@@ -22927,6 +22950,35 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832149485131660156}
   m_Mesh: {fileID: -5495902117074765545, guid: bd005f13988aab844bcfd9e1edf88e55, type: 3}
+--- !u!54 &5334037120276546313
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832149485131660156}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &5334037120276546314
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832149485131660156}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7366382, y: 0.062075067, z: 0.070935994}
+  m_Center: {x: 0.14395578, y: -0.00018315681, z: 0.018606996}
 --- !u!33 &5366159436212601985
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -25691,7 +25743,7 @@ Transform:
   m_Children:
   - {fileID: 3826024152354099636}
   m_Father: {fileID: 543450652755668723}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &8442510506022568891
 MeshRenderer:
