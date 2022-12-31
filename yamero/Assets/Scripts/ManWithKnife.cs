@@ -16,6 +16,8 @@ public class ManWithKnife : Collidable
 
     private Animator animator;
 
+    private float lastTime;
+
 
 
     public override void Awake()
@@ -23,6 +25,7 @@ public class ManWithKnife : Collidable
         base.Awake();
         health = maxHealth.Value;
         animator = GetComponent<Animator>();
+        lastTime = 0;
     }
 
     public override void OnCollisionEnter(Collision other)
@@ -35,6 +38,12 @@ public class ManWithKnife : Collidable
         dealWithCollision(other);
     }
 
+    private void OnCollisionExit(Collision other)
+    {
+        Debug.Log("on collision exit");
+        lastTime = Time.time;
+    }
+
     public void Update()
     {
         if (health <= 0)
@@ -44,9 +53,18 @@ public class ManWithKnife : Collidable
             Debug.Log("Puzzle completed");
             dealWithNoHealth();
         }
+
+        
+        if (lastTime != 0 && Mathf.Abs(Time.time - lastTime) >= 5.0f)
+        {
+            Debug.Log(Mathf.Abs(Time.time - lastTime));
+            resetHealth();
+            lastTime = 0;
+        }
+
     }
 
-    public void dealWithCollision(Collision other)
+    private void dealWithCollision(Collision other)
     {
         if (other.gameObject.tag == "Lighter")
         {
@@ -55,6 +73,12 @@ public class ManWithKnife : Collidable
             Debug.Log("Take Damage");
             TakeDamage();
         }
+    }
+
+    private void resetHealth()
+    {
+        Debug.Log("max health reseted");
+        health = maxHealth.Value;
     }
 
     private void TakeDamage()
