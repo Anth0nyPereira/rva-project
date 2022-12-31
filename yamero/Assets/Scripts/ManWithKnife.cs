@@ -69,6 +69,8 @@ public class ManWithKnife : Collidable
 
     private void letKnifeFallDown()
     {
+        this.GetComponent<Rigidbody>().isKinematic = true;
+        this.transform.GetChild(0).gameObject.GetComponent<Rigidbody>().isKinematic = false;
         this.transform.GetChild(0).gameObject.GetComponent<Rigidbody>().useGravity = true;
     }
 
