@@ -5116,6 +5116,7 @@ MonoBehaviour:
   col: {fileID: 919132149033268298}
   collidableData: {fileID: 11400000, guid: 8535c4ef030906e4c80cd3e80d0bf9d5, type: 2}
   maxHealth: {fileID: 11400000, guid: 2ca5d198e8f2f6c48b2704a2da619b15, type: 2}
+  makeGuillotineDisappearEvent: {fileID: 11400000, guid: 4eb07e1bd3c36904082fbbf16613990d, type: 2}
 --- !u!54 &919132149033268300
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5163,6 +5164,7 @@ GameObject:
   - component: {fileID: 543450653364198040}
   - component: {fileID: 919132149356576804}
   - component: {fileID: 919132149356576803}
+  - component: {fileID: 919132149356576805}
   m_Layer: 0
   m_Name: guillotine
   m_TagString: Untagged
@@ -5198,6 +5200,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.524293, z: 1}
   m_Center: {x: 0, y: 7.708572, z: 0}
+--- !u!114 &919132149356576805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149356576802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341f73c10d3edb3499849c5208869c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 4eb07e1bd3c36904082fbbf16613990d, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 919132149356576803}
+        m_TargetAssemblyTypeName: Guillotine, Assembly-CSharp
+        m_MethodName: turnOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &919132149551415701
 GameObject:
   m_ObjectHideFlags: 0

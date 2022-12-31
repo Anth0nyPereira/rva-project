@@ -6,11 +6,17 @@ public class ManWithKnife : Collidable
 {
     [SerializeField]
     private FloatSO maxHealth;
+
+    [SerializeField]
+    private VoidEvent makeGuillotineDisappearEvent;
+
     private float health;
 
     private float lighterDamage;
 
     private Animator animator;
+
+
 
     public override void Awake()
     {
@@ -60,6 +66,7 @@ public class ManWithKnife : Collidable
     {
         moveHands();
         letKnifeFallDown();
+        makeGuillotineDisappear();
     }
 
     private void moveHands()
@@ -75,5 +82,8 @@ public class ManWithKnife : Collidable
         this.transform.GetChild(0).gameObject.GetComponent<Rigidbody>().useGravity = true;
     }
 
-
+    private void makeGuillotineDisappear()
+    {
+        makeGuillotineDisappearEvent.Raise();
+    }
 }

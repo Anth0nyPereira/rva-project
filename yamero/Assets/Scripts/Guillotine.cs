@@ -41,6 +41,12 @@ public class Guillotine : Collidable
         }
     }
 
+    public void turnOff()
+    {
+        Debug.Log("turn off guillotine");
+        this.gameObject.SetActive(false);
+    }
+
     private void TakeDamage()
     {
         health -= bulletDamage;
@@ -62,7 +68,7 @@ public class Guillotine : Collidable
         makeFallDown();
     }
 
-    public void makeFallDown()
+    private void makeFallDown()
     {
         blade.GetComponent<Rigidbody>().useGravity = true;
     }
