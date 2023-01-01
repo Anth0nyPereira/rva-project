@@ -29,6 +29,10 @@ public class HangedMan : Collidable
             Debug.Log("Take Damage");
             TakeDamage();
         }
+        else
+        {
+            Physics.IgnoreCollision(this.col, other.collider);
+        }
     }
 
     private void Update()

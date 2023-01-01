@@ -20,5 +20,12 @@ public class Blade : Collidable
         {
             disableTruckMovementEvent.Raise();
         }
+        else if (other.gameObject.tag == "TrainLine")
+        {
+            ;
+        } else
+        {
+            Physics.IgnoreCollision(this.col, other.collider);
+        }
     }
 }

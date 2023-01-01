@@ -10,6 +10,7 @@ TagManager:
   - RoomLight
   - SamplesInfoPanel
   - Lighter
+  - TrainLine
   layers:
   - Default
   - TransparentFX

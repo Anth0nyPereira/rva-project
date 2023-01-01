@@ -36,6 +36,10 @@ public class Bathub : Collidable
             TakeDamage();
             Debug.Log("Update Bathub Surface  Cracks");
         }
+        else
+        {
+            Physics.IgnoreCollision(this.col, other.collider);
+        }
     }
 
     private void Update()
