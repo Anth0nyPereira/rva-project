@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEditor;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -23,6 +24,8 @@ public class TruckMovement : MonoBehaviour
     private int trigger;
     private int[] arr;
     private string triggerName;
+    private bool moveX;
+    private float[] pos;
 
 
     private void Awake()
@@ -35,16 +38,21 @@ public class TruckMovement : MonoBehaviour
         mustRotate = false;
         coroutineFinished = true;
         counter = 0;
-        trigger = 0;
+        trigger = 1;
         arr = new int[] { 0, 90, 270, 180 };
-        triggerName = "";
+        pos = new float[] { 10.3f, -17.7f, 18, -10.3f };
+        // pos = new int[] {}
+        triggerName = "trigger2";
 
     }
 
     
     private void FixedUpdate()
     {
+
         col.transform.Translate(2 * direction * Time.fixedDeltaTime, Space.Self);
+        // lockMovement();
+        
         if (mustRotate)
         {
             rotation = transform.rotation.eulerAngles;
@@ -55,6 +63,7 @@ public class TruckMovement : MonoBehaviour
 
         if (coroutineFinished)
         {
+
             mustRotate = false;
         }
     }
@@ -110,5 +119,17 @@ public class TruckMovement : MonoBehaviour
     private void rotateRemaining()
     {
         transform.rotation = Quaternion.Euler(0, arr[getTrigger()], 0);
+    }
+
+    private void lockMovement()
+    {
+        if (getTrigger() % 2 == 0)
+        {
+            transform.position = new Vector3(pos[getTrigger()], transform.position.y, transform.position.z);
+        } else
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, pos[getTrigger()]);
+        }
+        
     }
 }
