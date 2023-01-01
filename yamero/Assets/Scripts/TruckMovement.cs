@@ -1,8 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class TruckMovement : MonoBehaviour
 {
@@ -11,37 +14,52 @@ public class TruckMovement : MonoBehaviour
 
     private Vector3 direction;
     private Collider col;
-    private Vector3 actualRotation;
+    private Vector3 rotation;
     private float rotationY;
     private bool mustRotate;
     private Transform targetTransform;
     private bool coroutineFinished;
+    private float counter;
+
 
     private void Awake()
     {
         direction = new Vector3(0, 0, 1);
         col = GetComponent<Collider>();
-        actualRotation = TransformUtils.GetInspectorRotation(this.transform);
-        rotationY = actualRotation.y;
+        rotation = transform.rotation.eulerAngles;
+        rotationY = rotation.y;
         // Debug.Log(rotationY);
         mustRotate = false;
         coroutineFinished = true;
+        counter = 0;
 
     }
 
     
     private void FixedUpdate()
     {
-        
+        col.transform.Translate(2 * direction * Time.fixedDeltaTime, Space.Self);
         if (mustRotate)
         {
+            rotation = transform.rotation.eulerAngles;
+            rotationY = rotation.y;
             doRotation();
+            mustRotate = false;
         }
 
         if (coroutineFinished)
         {
+            /*if (shouldAddRemaining)
+            {
+                float addToRotation = getRemaining(TransformUtils.GetInspectorRotation(this.transform).y, new float[] { 0, 90, 180, 270 });
+                transform.Rotate(new Vector3(0, addToRotation, 0));
+                shouldAddRemaining = false;
+            }
+            */
             mustRotate = false;
-            col.transform.Translate(2 * direction * Time.fixedDeltaTime, Space.Self);
+            // Debug.Log(this.transform.localPosition);
+            
+            // col.transform.localPosition = new Vector3(0, 0, col.transform.localPosition.z);
         }
     }
 
@@ -55,20 +73,16 @@ public class TruckMovement : MonoBehaviour
     public void doRotation()
     {
         StartCoroutine(rotateTruck(whenCoroutineEnds));
-
-
         Debug.Log("hi");
     }
 
     public IEnumerator rotateTruck(Action whenCEnds)
     {
-        Vector3 oldR = TransformUtils.GetInspectorRotation(this.transform);
-        Debug.Log("do coroutine now");
-        // Debug.Log(Mathf.Abs(oldR.y - TransformUtils.GetInspectorRotation(this.transform).y));
-        while (Mathf.Abs(oldR.y - TransformUtils.GetInspectorRotation(this.transform).y) <= 45)
+        while (counter >= -45)
         {
-            transform.RotateAround(transform.position, transform.up, -Time.fixedDeltaTime);
-            transform.RotateAround(targetTransform.position, transform.up, -Time.fixedDeltaTime);
+            transform.RotateAround(transform.position, transform.up, -25*Time.fixedDeltaTime);
+            transform.RotateAround(targetTransform.position, transform.up, -25*Time.fixedDeltaTime);
+            counter += -25*Time.fixedDeltaTime;
             Debug.Log("inside while loop");
             yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
@@ -77,8 +91,21 @@ public class TruckMovement : MonoBehaviour
 
     public void whenCoroutineEnds()
     {
+        StopCoroutine("rotateTruck");
         Debug.Log("finished coroutine");
         coroutineFinished = true;
         enableTriggerEvent.Raise();
+    }
+
+    private float getRemaining(float number, float[] array)
+    {
+        float[] dif = new float[array.Length];
+        for (int i=0; i<array.Length; i++)
+        {
+            float subtr = Mathf.Abs(number - array[i]);
+            dif[i] = subtr;
+        }
+        dif.OrderBy(a => a).ToArray();
+        return dif[0];
     }
 }
