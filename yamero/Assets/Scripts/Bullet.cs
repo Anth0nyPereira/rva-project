@@ -10,5 +10,19 @@ public class Bullet : Collidable
     public override void Awake()
     {
         base.Awake();
+        Destroy(gameObject, 5.0f);
+    }
+
+    public override void OnCollisionEnter(Collision other)
+    {
+        base.OnCollisionEnter(other);
+        if (other.gameObject.tag == "Gun" || other.gameObject.tag == "Truck")
+        {
+            ;
+        } else
+        {
+            Destroy(gameObject);
+        }
+        
     }
 }
