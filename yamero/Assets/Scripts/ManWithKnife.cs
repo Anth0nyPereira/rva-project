@@ -36,6 +36,7 @@ public class ManWithKnife : Collidable
     private void OnCollisionStay(Collision other)
     {
         dealWithCollision(other);
+        Debug.Log("on collision stay man with knife");
     }
 
     private void OnCollisionExit(Collision other)
