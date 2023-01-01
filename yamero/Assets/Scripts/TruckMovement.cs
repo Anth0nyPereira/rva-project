@@ -55,17 +55,7 @@ public class TruckMovement : MonoBehaviour
 
         if (coroutineFinished)
         {
-            /*if (shouldAddRemaining)
-            {
-                float addToRotation = getRemaining(TransformUtils.GetInspectorRotation(this.transform).y, new float[] { 0, 90, 180, 270 });
-                transform.Rotate(new Vector3(0, addToRotation, 0));
-                shouldAddRemaining = false;
-            }
-            */
             mustRotate = false;
-            // Debug.Log(this.transform.localPosition);
-            
-            // col.transform.localPosition = new Vector3(0, 0, col.transform.localPosition.z);
         }
     }
 
