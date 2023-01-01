@@ -26,6 +26,7 @@ public class TruckMovement : MonoBehaviour
     private string triggerName;
     private bool moveX;
     private float[] pos;
+    private bool canMove;
 
 
     private void Awake()
@@ -43,14 +44,17 @@ public class TruckMovement : MonoBehaviour
         pos = new float[] { 10.3f, -17.7f, 18, -10.3f };
         // pos = new int[] {}
         triggerName = "trigger2";
-
+        canMove = true;
     }
 
     
     private void FixedUpdate()
     {
-
-        col.transform.Translate(2 * direction * Time.fixedDeltaTime, Space.Self);
+        if (canMove)
+        {
+            col.transform.Translate(2 * direction * Time.fixedDeltaTime, Space.Self);
+        }
+        
         // lockMovement();
         
         if (mustRotate)
@@ -78,6 +82,16 @@ public class TruckMovement : MonoBehaviour
     public void getTriggerName(String triggerName)
     {
         this.triggerName = triggerName;
+    }
+
+    public void makeTruckNotToMove()
+    {
+        canMove = false;
+    }
+
+    public void makeTruckMoveAgain()
+    {
+        canMove = true;
     }
 
     private int getTrigger()
