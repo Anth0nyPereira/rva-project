@@ -20,6 +20,9 @@ public class TruckMovement : MonoBehaviour
     private Transform targetTransform;
     private bool coroutineFinished;
     private float counter;
+    private int trigger;
+    private int[] arr;
+    private string triggerName;
 
 
     private void Awake()
@@ -32,6 +35,9 @@ public class TruckMovement : MonoBehaviour
         mustRotate = false;
         coroutineFinished = true;
         counter = 0;
+        trigger = 0;
+        arr = new int[] { 0, 90, 270, 180 };
+        triggerName = "";
 
     }
 
@@ -70,6 +76,18 @@ public class TruckMovement : MonoBehaviour
         targetTransform = transform;
     }
 
+    public void getTriggerName(String triggerName)
+    {
+        this.triggerName = triggerName;
+    }
+
+    private int getTrigger()
+    {
+        trigger = int.Parse(triggerName.Substring(triggerName.Length - 1));
+        trigger -= 1;
+        return trigger;
+    }
+
     public void doRotation()
     {
         StartCoroutine(rotateTruck(whenCoroutineEnds));
@@ -93,19 +111,14 @@ public class TruckMovement : MonoBehaviour
     {
         StopCoroutine("rotateTruck");
         Debug.Log("finished coroutine");
+        counter = 0;
+        rotateRemaining();
         coroutineFinished = true;
         enableTriggerEvent.Raise();
     }
 
-    private float getRemaining(float number, float[] array)
+    private void rotateRemaining()
     {
-        float[] dif = new float[array.Length];
-        for (int i=0; i<array.Length; i++)
-        {
-            float subtr = Mathf.Abs(number - array[i]);
-            dif[i] = subtr;
-        }
-        dif.OrderBy(a => a).ToArray();
-        return dif[0];
+        transform.rotation = Quaternion.Euler(0, arr[getTrigger()], 0);
     }
 }

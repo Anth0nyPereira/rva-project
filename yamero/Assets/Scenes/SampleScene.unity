@@ -931,6 +931,7 @@ MonoBehaviour:
   col: {fileID: 607306302}
   collidableData: {fileID: 11400000, guid: 2edea6241c6f98948927daabbd697ab3, type: 2}
   rotateTruckEvent: {fileID: 11400000, guid: 0148eeaf12b8c8d4db6f9b40f4c69b14, type: 2}
+  sendTriggerName: {fileID: 11400000, guid: 6a05ecf6ade509641ba7a008c49183df, type: 2}
 --- !u!64 &607306302
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1240,6 +1241,7 @@ MonoBehaviour:
   col: {fileID: 709316223}
   collidableData: {fileID: 11400000, guid: d0cc61ffa972f64489bf8605a228778d, type: 2}
   rotateTruckEvent: {fileID: 11400000, guid: 0148eeaf12b8c8d4db6f9b40f4c69b14, type: 2}
+  sendTriggerName: {fileID: 11400000, guid: 6a05ecf6ade509641ba7a008c49183df, type: 2}
 --- !u!64 &709316223
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1646,6 +1648,7 @@ MonoBehaviour:
   col: {fileID: 1110286187}
   collidableData: {fileID: 11400000, guid: 608a352bf0f32be40b2a1bcadfa3f551, type: 2}
   rotateTruckEvent: {fileID: 11400000, guid: 0148eeaf12b8c8d4db6f9b40f4c69b14, type: 2}
+  sendTriggerName: {fileID: 11400000, guid: 6a05ecf6ade509641ba7a008c49183df, type: 2}
 --- !u!64 &1110286187
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3721,6 +3724,7 @@ MonoBehaviour:
   col: {fileID: 1895785375}
   collidableData: {fileID: 11400000, guid: cd8be1d7d2d42fd4083ff9be3f092bea, type: 2}
   rotateTruckEvent: {fileID: 11400000, guid: 0148eeaf12b8c8d4db6f9b40f4c69b14, type: 2}
+  sendTriggerName: {fileID: 11400000, guid: 6a05ecf6ade509641ba7a008c49183df, type: 2}
 --- !u!64 &1895785375
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5243,6 +5247,7 @@ GameObject:
   - component: {fileID: 919132149551415702}
   - component: {fileID: 919132149551415703}
   - component: {fileID: 919132149551415704}
+  - component: {fileID: 919132149551415705}
   m_Layer: 0
   m_Name: vagoneta
   m_TagString: Truck
@@ -5307,6 +5312,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &919132149551415705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149551415701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5d72d6e8353b0469ac7c073ae64680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 6a05ecf6ade509641ba7a008c49183df, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 919132149551415702}
+        m_TargetAssemblyTypeName: TruckMovement, Assembly-CSharp
+        m_MethodName: getTriggerName
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &944597021969494356
 Transform:
   m_ObjectHideFlags: 0

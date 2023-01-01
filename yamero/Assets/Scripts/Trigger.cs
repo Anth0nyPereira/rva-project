@@ -8,6 +8,9 @@ public class Trigger : Collidable
     [SerializeField]
     private TransformEvent rotateTruckEvent;
 
+    [SerializeField]
+    private StringEvent sendTriggerName;
+
     private GameObject target;
 
     public override void Awake()
@@ -23,6 +26,7 @@ public class Trigger : Collidable
         {
             Debug.Log("Time to rotate");
             rotateTruckEvent.Raise(target.transform);
+            sendTriggerName.Raise(this.collidableData.CollidableName);
             this.col.enabled = false;
         }
     }
