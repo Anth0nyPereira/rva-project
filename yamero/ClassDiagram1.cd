@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Collidable">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAQAAAAAAAAAIAEAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Collidable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bathub" Collapsed="true">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQAIEAAAmAAAAAAAAAAAAAAAAAKICAAAgAAAAEk=</HashCode>
+      <FileName>Assets\Scripts\Bathub.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blade" Collapsed="true">
+    <Position X="4" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Blade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bullet" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAIAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Bullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BulletManager" Collapsed="true">
+    <Position X="2" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAgAQAAABAAAAAAAGA=</HashCode>
+      <FileName>Assets\Scripts\BulletManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HangedMan" Collapsed="true">
+    <Position X="9.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAIADAAAAAAAAAQAAAICAACAAAIAAAAgAAAAEg=</HashCode>
+      <FileName>Assets\Scripts\HangedMan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trigger" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAACAAAAAAAIAAAIAAAAAAAAAAIAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Trigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Truck" Collapsed="true">
+    <Position X="4" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Truck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lighter" Collapsed="true">
+    <Position X="5.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAgAAAABAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Lighter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Knife" Collapsed="true">
+    <Position X="3.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Knife.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Interactable" Collapsed="true">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAABAAACAAAAEAAAAQAAAAAACCAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Interactable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gun" Collapsed="true">
+    <Position X="1.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Gun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManWithKnife" Collapsed="true">
+    <Position X="11" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAQQgAQMAAAAAgAAABAAAgAAAAAAAAIMAAAAgQAAAEg=</HashCode>
+      <FileName>Assets\Scripts\ManWithKnife.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Guillotine" Collapsed="true">
+    <Position X="8.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoQAAAAYAAAgAAAAAAAAAAAICAACAAAIAAAAgAAAAEg=</HashCode>
+      <FileName>Assets\Scripts\Guillotine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TruckMovement" Collapsed="true">
+    <Position X="10.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAIEgAgIBAgAACAAdAAiAMIACMQAAAAEAAgAEI=</HashCode>
+      <FileName>Assets\Scripts\TruckMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnimateHandOnInput" Collapsed="true">
+    <Position X="10.25" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AASAAAAAAAAAAAAgAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AnimateHandOnInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
