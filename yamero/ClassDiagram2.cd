@@ -1,4 +1,103 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="UnityVoidEvent" Collapsed="true">
+    <Position X="8" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ScriptableObjects\GameEvents\UnityEvents\UnityVoidEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityVector3Event" Collapsed="true">
+    <Position X="8" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ScriptableObjects\GameEvents\UnityEvents\UnityVector3Event.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityTransformEvent" Collapsed="true">
+    <Position X="8" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ScriptableObjects\GameEvents\UnityEvents\UnityTransformEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityStringEvent" Collapsed="true">
+    <Position X="8" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ScriptableObjects\GameEvents\UnityEvents\UnityStringEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseGameEventListener&lt;T, E, UER&gt;" Collapsed="true">
+    <Position X="6" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAABAAAACAAAAAgIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\ScriptableObjects\GameEvents\Listeners\BaseGameEventListener.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StringListener" Collapsed="true">
+    <Position X="8.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ScriptableObjects\GameEvents\Listeners\StringListener.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransformListener" Collapsed="true">
+    <Position X="6.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ScriptableObjects\GameEvents\Listeners\TransformListener.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vector3Listener" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ScriptableObjects\GameEvents\Listeners\Vector3Listener.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VoidListener" Collapsed="true">
+    <Position X="3.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ScriptableObjects\GameEvents\Listeners\VoidListener.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseGameEvent&lt;T&gt;" Collapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgIAAAAAAAAAAAAAAAAAgAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\ScriptableObjects\GameEvents\Events\BaseGameEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StringEvent" Collapsed="true">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ScriptableObjects\GameEvents\Events\StringEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransformEvent" Collapsed="true">
+    <Position X="4.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ScriptableObjects\GameEvents\Events\TransformEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vector3Event" Collapsed="true">
+    <Position X="2.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ScriptableObjects\GameEvents\Events\Vector3Event.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VoidEvent" Collapsed="true">
+    <Position X="0.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ScriptableObjects\GameEvents\Events\VoidEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
