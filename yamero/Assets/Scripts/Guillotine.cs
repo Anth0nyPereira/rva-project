@@ -26,7 +26,6 @@ public class Guillotine : Collidable
         if (other.gameObject.tag == "Bullet")
         {
             bulletDamage = other.gameObject.GetComponent<Bullet>().bulletDamage.Value;
-            Debug.Log("Take Damage");
             TakeDamage();
         }
     }
@@ -35,7 +34,6 @@ public class Guillotine : Collidable
     {
         if (health == 0)
         {
-            Debug.Log("Rope must break");
             breakRope();
             health = maxHealth.Value;
         }
@@ -43,7 +41,6 @@ public class Guillotine : Collidable
 
     public void turnOff()
     {
-        Debug.Log("turn off guillotine");
         this.gameObject.SetActive(false);
     }
 

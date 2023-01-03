@@ -26,7 +26,6 @@ public class HangedMan : Collidable
         if (other.gameObject.tag == "Bullet")
         {
             bulletDamage = other.gameObject.GetComponent<Bullet>().bulletDamage.Value;
-            Debug.Log("Take Damage");
             TakeDamage();
         }
         else
@@ -39,9 +38,7 @@ public class HangedMan : Collidable
     {
         if (health == 0)
         {
-            Debug.Log("Rope must break");
             breakHangedManRope();
-            Debug.Log("Puzzle completed. HangedMan should later disappear");
             health = maxHealth.Value;
         }
     }
@@ -64,7 +61,6 @@ public class HangedMan : Collidable
     {
         disableCollider();
         knot1 = this.getKnot();
-        Debug.Log("Make hanged man fall down");
         makeFallDown();
     }
 

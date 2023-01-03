@@ -31,10 +31,8 @@ public class Bathub : Collidable
         base.OnCollisionEnter(other);
         if (other.gameObject.tag == "Knife")
         {
-            Debug.Log("Take Damage");
             knifeDamage = other.gameObject.GetComponent<Knife>().damage;
             TakeDamage();
-            Debug.Log("Update Bathub Surface  Cracks");
         }
         else
         {
@@ -45,9 +43,6 @@ public class Bathub : Collidable
     private void Update()
     {
         if (health == 0) {
-            Debug.Log("Waterfall should appear");
-            Debug.Log("Water level should decrease");
-            Debug.Log("Puzzle completed. Bathub should later disappear");
             handlePuzzle();
         }
     }

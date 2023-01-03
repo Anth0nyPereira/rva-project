@@ -16,7 +16,6 @@ public class TruckMovement : MonoBehaviour
     private Vector3 direction;
     private Collider col;
     private Vector3 rotation;
-    private float rotationY;
     private bool mustRotate;
     private Transform targetTransform;
     private bool coroutineFinished;
@@ -34,15 +33,12 @@ public class TruckMovement : MonoBehaviour
         direction = new Vector3(0, 0, 1);
         col = GetComponent<Collider>();
         rotation = transform.rotation.eulerAngles;
-        rotationY = rotation.y;
-        // Debug.Log(rotationY);
         mustRotate = false;
         coroutineFinished = true;
         counter = 0;
         trigger = 1;
         arr = new int[] { 0, 90, 270, 180 };
         pos = new float[] { 10.3f, -17.7f, 18, -10.3f };
-        // pos = new int[] {}
         triggerName = "trigger2";
         canMove = true;
     }
@@ -60,7 +56,6 @@ public class TruckMovement : MonoBehaviour
         if (mustRotate)
         {
             rotation = transform.rotation.eulerAngles;
-            rotationY = rotation.y;
             doRotation();
             mustRotate = false;
         }
@@ -104,7 +99,6 @@ public class TruckMovement : MonoBehaviour
     public void doRotation()
     {
         StartCoroutine(rotateTruck(whenCoroutineEnds));
-        Debug.Log("hi");
     }
 
     public IEnumerator rotateTruck(Action whenCEnds)
@@ -114,7 +108,6 @@ public class TruckMovement : MonoBehaviour
             transform.RotateAround(transform.position, transform.up, -25*Time.fixedDeltaTime);
             transform.RotateAround(targetTransform.position, transform.up, -25*Time.fixedDeltaTime);
             counter += -25*Time.fixedDeltaTime;
-            Debug.Log("inside while loop");
             yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
         whenCEnds();
@@ -123,7 +116,6 @@ public class TruckMovement : MonoBehaviour
     public void whenCoroutineEnds()
     {
         StopCoroutine("rotateTruck");
-        Debug.Log("finished coroutine");
         counter = 0;
         rotateRemaining();
         coroutineFinished = true;

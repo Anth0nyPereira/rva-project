@@ -24,7 +24,6 @@ public class Trigger : Collidable
         Debug.Log("entering collision");
         if (other.gameObject.tag == "Truck")
         {
-            Debug.Log("Time to rotate");
             rotateTruckEvent.Raise(target.transform);
             sendTriggerName.Raise(this.collidableData.CollidableName);
             this.col.enabled = false;

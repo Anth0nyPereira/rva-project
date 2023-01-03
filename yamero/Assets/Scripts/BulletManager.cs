@@ -30,7 +30,6 @@ public class BulletManager : MonoBehaviour
 
     private void FireBullet(ActivateEventArgs args)
     {
-        Debug.Log("fire bullet!!");
         GameObject spawned = Instantiate(bullet);
         spawned.transform.position = spawningPoint.transform.position;
         spawned.transform.eulerAngles = actualRot + new Vector3(0, 90, 0);

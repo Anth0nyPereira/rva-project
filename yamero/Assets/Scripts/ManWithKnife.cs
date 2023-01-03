@@ -36,12 +36,10 @@ public class ManWithKnife : Collidable
     private void OnCollisionStay(Collision other)
     {
         dealWithCollision(other);
-        Debug.Log("on collision stay man with knife");
     }
 
     private void OnCollisionExit(Collision other)
     {
-        Debug.Log("on collision exit");
         lastTime = Time.time;
     }
 
@@ -49,9 +47,6 @@ public class ManWithKnife : Collidable
     {
         if (health <= 0)
         {
-            Debug.Log("Hands should move");
-            Debug.Log("Knife should fall dowm");
-            Debug.Log("Puzzle completed");
             dealWithNoHealth();
         }
 
@@ -69,9 +64,7 @@ public class ManWithKnife : Collidable
     {
         if (other.gameObject.tag == "Lighter")
         {
-            Debug.Log("man with a knife");
             lighterDamage = other.gameObject.GetComponent<Lighter>().damage;
-            Debug.Log("Take Damage");
             TakeDamage();
         }
         else
@@ -82,7 +75,6 @@ public class ManWithKnife : Collidable
 
     private void resetHealth()
     {
-        Debug.Log("max health reseted");
         health = maxHealth.Value;
     }
 
